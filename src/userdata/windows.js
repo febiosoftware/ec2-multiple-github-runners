@@ -10,7 +10,7 @@ const globalConfig = [
   // Download GitHub Runner
   'Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.332.0/actions-runner-win-x64-2.332.0.zip -OutFile actions-runner-win-x64-2.332.0.zip',
   // Check hash is good
-  'if((Get-FileHash -Path actions-runner-win-x64-2.332.0.zip -Algorithm SHA256).Hash.ToUpper() -ne \'sha256:83e56e05b21eb58c9697f82e52c53b30867335ff039cd5d44d1a1a24d2149f4b\'.ToUpper()){ throw \'Computed checksum did not match\' }',
+  'if((Get-FileHash -Path actions-runner-win-x64-2.332.0.zip -Algorithm SHA256).Hash.ToUpper() -ne \'83e56e05b21eb58c9697f82e52c53b30867335ff039cd5d44d1a1a24d2149f4b\'.ToUpper()){ throw \'Computed checksum did not match\' }',
 ].join("\n");
 
 function createRegistration(label, githubRegistrationToken) {
