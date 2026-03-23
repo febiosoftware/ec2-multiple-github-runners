@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ multi-os-multi-runner ]
+    branches: [ main ]
 
 name: Package
 
@@ -26,8 +26,8 @@ jobs:
 
       - name: Commit
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "tundranerd@gmail.com"
+          git config --global user.name "FEBio Workflow"
+          git config --global user.email "workflow@febio.org"
           git add dist/
           git commit -m "Update dist" || echo "No changes to commit"
           git push origin ${GITHUB_REF##*/}
